@@ -2,6 +2,8 @@
 
 Ed25519-like signatures with X25519 keys, Axolotl-style.
 
+<https://pub.dev/packages/flutter_curve25519>
+
 ## Functions
 
 Functions accept and return `[]uint8 Array`s.

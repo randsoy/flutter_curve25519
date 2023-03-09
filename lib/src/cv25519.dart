@@ -1061,6 +1061,7 @@ int _curve25519SignOpen(Uint8List m, Uint8List sm, int n, Uint8List pk) {
 
 /* AxlSign */
 class Curve25519 {
+  /// ECDH shared key
   static Uint8List sharedKey(Uint8List secretKey, Uint8List publicKey) {
     var sharedKey = Uint8List(32);
     _cryptoScalarmult(sharedKey, secretKey, publicKey);
@@ -1093,7 +1094,6 @@ class Curve25519 {
     return m;
   }
 
-// add by Miguel
   static String openMessageStr(Uint8List publicKey, Uint8List signedMsg) {
     var m = openMessage(publicKey, signedMsg);
     return m.toString();
@@ -1163,8 +1163,6 @@ class Curve25519KeyPair {
     return Curve25519KeyPair(privateKey: sk, publicKey: pk);
   }
 }
-
-
 
 /*
 func debugA8(t string, a []uint8) {
