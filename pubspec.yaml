@@ -1,6 +1,6 @@
 name: flutter_curve25519
-description: A new Flutter package project.
-version: 0.0.1
+description: Ed25519-like signatures with X25519 keys, Axolotl-style.
+version: 0.1.0
 homepage: https://github.com/randsoy/flutter_curve25519
 
 environment:
