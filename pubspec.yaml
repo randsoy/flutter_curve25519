@@ -1,6 +1,6 @@
 name: flutter_curve25519
 description: Ed25519-like signatures with X25519 keys, Axolotl-style.
-version: 0.1.1
+version: 0.1.2
 homepage: https://github.com/randsoy/flutter_curve25519
 
 environment:

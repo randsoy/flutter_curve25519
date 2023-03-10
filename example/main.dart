@@ -7,6 +7,9 @@ import 'package:flutter_curve25519/flutter_curve25519.dart';
 void main(List<String> args) {
   var seed = List.generate(32, (index) => Random().nextInt(256));
   final keypair = Curve25519KeyPair.fromSeed(Uint8List.fromList(seed));
+  // private key to public key
+  final keypair1 = Curve25519KeyPair.fromSeed(keypair.privateKey);
+  print(keypair1);
   final message = base64Decode("BSHHNbsuQxc5vqIU/8C9zp4ziaF+kbyAqSzvc2b6zDUG");
   var optRandom = List.generate(64, (index) => Random().nextInt(256));
   final signature = Curve25519.sign(
